@@ -1,7 +1,5 @@
 #!/usr/bin/php
-
 <?php
-
 if ($argc > 1)
 {
 	$str = file_get_contents($argv[1]);
@@ -32,7 +30,6 @@ if ($argc > 1)
 		$fusion = explode($ret[0][$i], $new_str);
 		$new_str = implode($upped_ret[0][$i], $fusion);
 	}
-	echo $new_str;
+	print($new_str);
 }
-
 ?>
