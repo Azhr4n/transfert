@@ -19,7 +19,7 @@ function convertMonth($str)
 	{
 		if (preg_match('/^'.$month.'$/', $str))
 			return ($inc);
-		$i++;
+		$inc++;
 	}
 }
 
