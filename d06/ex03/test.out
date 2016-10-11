@@ -1,0 +1,25 @@
+
+<- Matrix ----------------------------------------------------------------------
+Your documentation here.
+---------------------------------------------------------------------- Matrix ->
+Let's start with an harmless identity matrix :
+Matrix IDENTITY instance constructed
+M | vtcX | vtcY | vtcZ | vtcO
+-----------------------------
+x | 1.00 | 0.00 | 0.00 | 0.00
+y | 0.00 | 1.00 | 0.00 | 0.00
+z | 0.00 | 0.00 | 1.00 | 0.00
+w | 0.00 | 0.00 | 0.00 | 1.00
+
+So far, so good. Let's create a translation matrix now.
+Matrix TRANSLATION preset instance constructed
+M | vtcX | vtcY | vtcZ | vtcO
+-----------------------------
+x | 1.00 | 0.00 | 0.00 | 20.00
+y | 0.00 | 1.00 | 0.00 | 20.00
+z | 0.00 | 0.00 | 1.00 | 0.00
+w | 0.00 | 0.00 | 0.00 | 1.00
+
+A scale matrix is no big deal.
+
+Fatal error: Method Matrix::__toString() must not throw an exception, caught Error: Call to a member function getX() on null in F:\Prog\transfert\d06\ex03\main_03.php on line 0

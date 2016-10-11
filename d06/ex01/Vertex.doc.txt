@@ -1,0 +1,20 @@
+
+<- Vertex ---------------------------------------------------------------------
+The Vertex class handles Vertex.
+
+Instance are created by settings the next values
+x, y and z, which are the coordinates.
+
+new Vertex( array('x'=>$x, 'y'=>$y, 'z'=>$z) );
+
+You can also set optional values like w and or an instance
+of the Color class.
+
+new Vertex( array(...'w'=>$w,
+	'color'=>(new Color(array('rgb'=>0xFFFFFF)))) );
+
+The class provides the following methods :
+	Vertex	getX() / setX($val);
+	...
+	Vertex	getColor() / setColor($color);
+--------------------------------------------------------------------- Vertex ->
