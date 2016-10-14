@@ -1,26 +1,18 @@
 
-function addToDo() {
+$('#new').click(function() {
 	var ret = prompt("New 'to do element'");
 	ret = ret.trim();
 	if (ret.length > 0)
 	{
-		static_id++;
-		var list = document.getElementById('ft_list');
-		var div = document.createElement('div');
-		var child = document.createTextNode(ret);
-		div.appendChild(child);
-		div.setAttribute('onclick', 'deleteToDo(this)');
-		list.insertBefore(div, list.firstChild);
-		setCookie('todolist', list.innerHTML, 1);
+		$('#ft_list').prepend("<div onclick=deleteToDo(this)>" + ret + "</div>");
+		setCookie('todolist', $('#ft_list').html(), 1);
 	}
-}
+})
 
 function deleteToDo(id) {
-	alert(id);
 	if (confirm('Want to delete this ?')) {
-		var list = document.getElementById('ft_list');
-		list.removeChild(id);
-		setCookie('todolist', list.innerHTML, 1);
+		$(id).remove();
+		setCookie('todolist', $('#ft_list').html(), 1);
 	}
 }
 
@@ -47,6 +39,5 @@ function getCookie(cname) {
 }
 
 function refresh() {
-	var list = document.getElementById('ft_list');
-	list.innerHTML = getCookie('todolist');
+	$('#ft_list').html(getCookie('todolist'));
 }
