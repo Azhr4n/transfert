@@ -24,7 +24,8 @@ SRCS =			srcs/get_next_line.c	\
 
 SRCS_CHECKER =	srcs_checker/checker.c
 
-SRCS_PS =		srcs_ps/push_swap.c
+SRCS_PS =		srcs_ps/push_swap.c		\
+				srcs_ps/tricks.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_CHECKER = $(SRCS_CHECKER:.c=.o)

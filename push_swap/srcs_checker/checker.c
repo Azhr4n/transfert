@@ -13,7 +13,7 @@ int		main(int ac, char **av)
 	if (ac > 1)
 	{
 		preset_pile(&pile_a, &pile_b);
-		if (process_arg(&pile_a, av + 1, ac - 1))
+		if (process_arg(&pile_a, av + 1))
 		{
 			if (reading_command(&pile_a, &pile_b))
 				ft_putstr("Ok\n");

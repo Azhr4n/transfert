@@ -44,7 +44,7 @@ void			push_back_cl(t_char_list **list, t_char_list *new);
 
 /* process.c */
 void			preset_pile(t_pile *pile_a, t_pile *pile_b);
-int				process_arg(t_pile *pile, char **av, int size);
+int				process_arg(t_pile *pile, char **av);
 
 /* execute.c */
 int				reading_command(t_pile *pile_a, t_pile *pile_b);
@@ -52,5 +52,11 @@ int				reading_command(t_pile *pile_a, t_pile *pile_b);
 /* is_ordered.c */
 int				is_ordered(t_pile *pile_a, t_pile *pile_b);
 int				ordered(t_pile *pile);
+
+/* tricks.c */
+void			test_swap(t_pile *pile_a, t_pile *pile_b, int *done);
+void			test_r_rot(t_pile *pile_a, t_pile *pile_b, int *done);
+void			test_rot(t_pile *pile_a, t_pile *pile_b, int *done);
+void			magic_trick(t_pile *pile_a, int *done);
 
 #endif
